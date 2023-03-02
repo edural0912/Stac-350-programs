@@ -121,14 +121,14 @@ int main() {
 
     // Measure the execution time of the built-in sort algorithm for 100 integers
     auto start5 = high_resolution_clock::now();
-    sort(arrSmall, arr100 + 100);
+    sort(arrSmall, arrSmall + 100);
     auto stop5 = high_resolution_clock::now();
     auto duration5 = duration_cast<nanoseconds>(stop5 - start5);
     cout << "Built-in Sort Small (100): " << "elasped time in nanoseconds: " << duration5.count() << " ns" << endl;
 
     // Measure the execution time of the built-in sort algorithm for 100000 integers
     auto start6 = high_resolution_clock::now();
-    sort(arrLarge, arr100000 + 100000);
+    sort(arrLarge, arrLarge + 100000);
     auto stop6 = high_resolution_clock::now();
     auto duration6 = duration_cast<nanoseconds>(stop6 - start6);
     cout << "Built-in Sort Large (100000): " << "elasped time in nanoseconds: " << duration6.count() << " ns" << endl;
